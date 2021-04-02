@@ -24,5 +24,20 @@ exports.generateRequestTicket=(req,res)=>{
     });
   
   }
+  exports.showTickets=(req,res)=>{
+    let data=[]
+    Ticket.findAll().then(tickets =>{
+      for (let i = 0; i < tickets.length; i++) {
+        data.push(
+          {userid:tickets[i].userid,
+            message:tickets[i].message
+          }
+        )
+      }
+      res.send(data)
+    }
+     
+      )
+  }
 
 

@@ -26,5 +26,10 @@ module.exports = function(app) {
   app.post("/api/test/changerequest",
   [authJwt.verifyToken,authJwt.isUser],
   controller.generateRequestTicket
-  )
+  );
+  app.get(
+    "/api/test/showtickets",
+    [authJwt.verifyToken, authJwt.isAdmin],
+    controller.showTickets
+  );
 };
