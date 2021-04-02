@@ -9,5 +9,10 @@ exports.userBoard = (req, res) => {
 exports.adminBoard = (req, res) => {
   res.status(200).send("Admin Content.");
 };
+exports.generateRequestTicket=(req,res)=>{
+  res.status(200).send("User Request Ticket generation")
+ 
+  
+  }
 
 
