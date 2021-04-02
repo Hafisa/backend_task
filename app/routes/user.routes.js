@@ -14,17 +14,13 @@ module.exports = function(app) {
 
   app.get(
     "/api/test/user",
-    [authJwt.verifyToken,authJwt.isUser],
+    [authJwt.verifyToken],
     controller.userBoard
   );
 
   app.get(
     "/api/test/admin",
     [authJwt.verifyToken, authJwt.isAdmin],
-  controller.adminBoard
+    controller.adminBoard
   );
-  app.post("/api/test/changerequest",
-  [authJwt.verifyToken,authJwt.isUser],
-  controller.generateRequestTicket
-  )
 };
