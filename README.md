@@ -6,14 +6,16 @@ Technology stack is as follows:
 2. Node Js
 3. Sequelize 
 
-Project setup
- npmm install
+##Project setup
+ npm install
 
  create a Database 'test_db'
 
- Run:
+ ##Run:
  node server.js
- 
+
+
+
 
 
 
