@@ -49,10 +49,7 @@ isUser = (req, res, next) => {
           next();
           return;
         }
-
-       
       }
-
       res.status(403).send({
         message: "Require User Role!"
       });

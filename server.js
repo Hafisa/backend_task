@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-// simple route
+// simple route testing
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to backend task application." });
 });
@@ -41,6 +41,8 @@ db.sequelize.sync({force: true}).then(() => {
 // routes
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
+
+// ADD roles 'user and admin' in the table
 function initial() {
     Role.create({
       id: 1,
